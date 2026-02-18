@@ -1,4 +1,23 @@
-# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+ENV/
+.env
+.idea/
+.vscode/
+uploads/
+processed/
+*.sqlite3
+*.log
+node_modules/
+dist/
+build/
+*.egg-info/
+/.DS_Store# Python
 __pycache__/
 *.py[cod]
 *$py.class
