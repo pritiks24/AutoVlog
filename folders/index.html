@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>ESP32 Video Editor</h1>
+
+    <form method="POST" action="/capture">
+      <label>ESP32 IP:</label>
+      <input name="ip" placeholder="192.168.1.45" required />
+
+      <label>Seconds to record:</label>
+      <input name="seconds" type="number" value="5" min="1" />
+
+      <button type="submit">Capture</button>
+    </form>
+
+    {% if video_url %}
+      <h2>Captured Video</h2>
+      <video width="480" controls>
+        <source src="{{ video_url }}" type="video/mp4">
+      </video>
+
+      <p><a href="{{ video_url }}" download>Download</a></p>
+    {% endif %}
+  </body>
+</html>
